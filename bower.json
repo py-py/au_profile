@@ -1,0 +1,21 @@
+{
+  "name": "profile",
+  "description": "",
+  "main": "index.html",
+  "authors": [
+    "r.valeev"
+  ],
+  "license": "ISC",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "app/libs/",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "materialize": "^0.100.2"
+  }
+}
