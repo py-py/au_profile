@@ -4,16 +4,70 @@
 <head>
     <meta charset="UTF-8">
     <title>Document</title>
-    <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/libs.css">
+    <link rel="stylesheet" href="css/main.css">
 </head>
 
 <body>
     <div class="nav">
-
+        <div class="arrow left-align">
+            <a href="auchan.ua">
+                <img src="img/back_arrow.svg" alt="back_arrow">
+            </a>
+        </div>
     </div>
-    <div class="container">
 
+    <div class="profile_container">
+        <div class="place_picture">
+            <img src="img/place_picture.svg" alt="place_picture">
+            <span>Дополнительная информация</span>
+        </div>
+        <form id="main_form" class="col s12" action="#" method="POST">
+            <!-- ПЕРВЫЙ БЛОК -->
+            <div class="inner_block">
+                <div class="title">
+                    <div class="title_number">1</div>
+                    <div class="title_name">ИНФОРМАЦИЯ О ВАШЕМ АККАУНТЕ</div>
+                </div>
+                <div class="form_block">
+                    <div class="input-field">
+                        <input id="phone" type="tel">
+                        <label for="phone">Ваш телефон</label>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ВТОРОЙ БЛОК -->
+            <div class="inner_block">
+                <div class="title">
+                    <div class="title_number">2</div>
+                    <div class="title_name">ВАШ АДРЕС</div>
+                </div>
+                <div class="form_block">
+
+                </div>
+            </div>
+
+            <!-- ТРЕТИЙ БЛОК -->
+            <div class="inner_block">
+                <div class="title">
+                    <div class="title_number">3</div>
+                    <div class="title_name">ЕЩЕ НЕМНОГО ВОПРОСОВ</div>
+                </div>
+                <div class="form_block">
+
+                </div>
+            </div>
+
+            <!-- SUBMIT BUTTON -->
+            <div class="button_block">
+                <input type="submit" class="button" value="СОХРАНИТЬ">
+            </div>
+
+        </form>
     </div>
+
+    <script src="/js/libs.min.js"></script>
 </body>
+
 </html>
