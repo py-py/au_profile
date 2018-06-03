@@ -1,3 +1,5 @@
+$auchan-color: #e0001a;
+
 @font-face {
     font-family: 'RobotoRegular';
     src: url('../fonts/Roboto-Regular.ttf') format('truetype');
@@ -21,7 +23,7 @@
     color: #fff;
     line-height: 16px;
     text-align: center;
-    background: #e0001a;
+    background: $auchan-color;
 }
 
 @mixin name_block {
@@ -77,7 +79,7 @@ body {
             margin: 16px 0;
             text-align: center;
             .button {
-                background-color: #e0001a;
+                background-color: $auchan-color;
                 border: none;
                 border-radius: 24px;
                 color: #fff;
@@ -91,24 +93,26 @@ body {
 }
 
 .input-field  {
-    label {
-        font-size: 16px;
-        line-height: 21px;
-        color: #828282 !important;
-        
-    }
-    label.active {
-        color: #e0001a !important;     
-    }
-    input {
-        border-bottom: 1px solid #f8f8f8 !important;
-    }
-    input:focus {
-        font-size: 16px;
-        line-height: 21px;
-        color: #4f4f4f !important;
-        border-bottom: 1px solid #e0001a !important;
-        box-shadow: 0 1px 0 0 #e0001a !important;
-    }
+    
+    input.auchan {
+        border-bottom: 1px solid #f8f8f8;
+        &+label {
+            font-size: 16px;
+            line-height: 21px;
+            color: #828282;
+        }
+    } 
+    &.active {
+        input.auchan:focus {
+            font-size: 16px;
+            line-height: 21px;
+            color: #4f4f4f;
+            border-bottom: 1px solid $auchan-color;
+            box-shadow: 0 1px 0 0 $auchan-color;
+            &+label.active{
+                color: $auchan-color; 
+            }
+        }
+    }   
 }
 
