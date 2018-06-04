@@ -1,4 +1,9 @@
+$main-text-color: #333333;
 $auchan-color: #e0001a;
+$block-text-color: #4f4f4f;
+$block-text-size: 12px;
+$block-label-color: #828282;
+$border-bottom-color: #f8f8f8;
 
 @font-face {
     font-family: 'RobotoRegular';
@@ -40,6 +45,10 @@ body {
         height: 56px;
         display: flex;
         align-items: center;
+        a {
+            display: flex;
+            align-content: center;
+        }
     }
     .profile_container {
         .place_picture {
@@ -54,7 +63,7 @@ body {
                 padding-top: 14px;
                 padding-bottom: 25px;
                 margin: 0 auto;
-                color: #333333;
+                color: $main-text-color;
                 font-size: 19px;
                 line-height: 24px;
             }
@@ -73,6 +82,52 @@ body {
             }
             .form_block {
                 padding-top: 12px;
+                padding-bottom: 17px;
+                
+                .select-field {
+                    .select-title {
+                        color: $block-label-color;
+                        font-size: $block-text-size;
+                        line-height: 14px;
+                    }
+                    .select-values {
+                        border: 0px;
+                        outline: 0px;
+                    }
+                }
+                .question_block {
+                    height: 77px;
+                    border-bottom: 1px solid $border-bottom-color;
+                    .question_title {
+                        margin-top: 14px;
+                        color: $block-text-color;
+                        font-size: 15px;
+                    }
+                    .question_row {
+                        margin-top:13px;
+                        display: flex;
+                        flex-wrap: wrap;
+                        .question {
+                            flex: 0 0 50%;
+                        }
+                    }
+                }
+                .select_block {
+                    padding-bottom: 8px;
+                    border-bottom: 1px solid $border-bottom-color;
+                    .select_title {
+                        margin-top: 14px;
+                        color: $block-label-color;
+                   
+                    }
+                    .select_row {
+                        select {
+                            border: none;
+                            padding-left: 0px;
+                            margin-left: -4px;
+                        }
+                    }
+                }
             }
         }
         .button_block {
@@ -92,21 +147,22 @@ body {
     }
 }
 
+
+// CHANGE DEFAULT STYLE;
 .input-field  {
-    
     input.auchan {
-        border-bottom: 1px solid #f8f8f8;
+        border-bottom: 1px solid $border-bottom-color;
         &+label {
             font-size: 16px;
             line-height: 21px;
-            color: #828282;
+            color: $block-label-color;
         }
     } 
     &.active {
         input.auchan:focus {
             font-size: 16px;
             line-height: 21px;
-            color: #4f4f4f;
+            color: $block-text-color;
             border-bottom: 1px solid $auchan-color;
             box-shadow: 0 1px 0 0 $auchan-color;
             &+label.active{
@@ -116,3 +172,12 @@ body {
     }   
 }
 
+.question_block {
+    [type="radio"].with-gap:checked+label:before,
+    [type="radio"].with-gap:checked+label:after {
+        border: 2px solid $auchan-color;
+    }
+    [type="radio"].with-gap:checked+label:after {
+        background-color: $auchan-color;
+        }
+}
