@@ -61,9 +61,10 @@ gulp.task('build', ['clean', 'sass', 'scripts'], function() {
         ])
     .pipe(gulp.dest('dist/css'));
 
-    var buildFonts = gulp.src('./app/fonts/**/*').pipe(gulp.dest('dist/fonts'));
-    var buildJs = gulp.src('./app/js/**/*').pipe(gulp.dest('dist/js'));
-    var buildHtml = gulp.src('./app/*.html').pipe(gulp.dest('dist'));
+    var buildImg    = gulp.src('./app/img/**/*').pipe(gulp.dest('dist/img'));
+    var buildFonts  = gulp.src('./app/fonts/**/*').pipe(gulp.dest('dist/fonts'));
+    var buildJs     = gulp.src('./app/js/**/*').pipe(gulp.dest('dist/js'));
+    var buildHtml   = gulp.src('./app/*.html').pipe(gulp.dest('dist'));
 
 });
 

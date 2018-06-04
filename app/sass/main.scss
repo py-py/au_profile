@@ -125,6 +125,9 @@ body {
                             border: none;
                             padding-left: 0px;
                             margin-left: -4px;
+                            &:focus {
+                                outline: none;
+                            }
                         }
                     }
                 }
@@ -149,6 +152,7 @@ body {
 
 
 // CHANGE DEFAULT STYLE;
+//INPUT FIELD
 .input-field  {
     input.auchan {
         border-bottom: 1px solid $border-bottom-color;
@@ -171,7 +175,7 @@ body {
         }
     }   
 }
-
+//RADIO BUTTON
 .question_block {
     [type="radio"].with-gap:checked+label:before,
     [type="radio"].with-gap:checked+label:after {
@@ -181,3 +185,4 @@ body {
         background-color: $auchan-color;
         }
 }
+
