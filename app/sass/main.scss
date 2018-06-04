@@ -4,7 +4,6 @@ $block-text-color: #4f4f4f;
 $block-text-size: 12px;
 $block-label-color: #828282;
 $border-bottom-color: #f8f8f8;
-
 @font-face {
     font-family: 'RobotoRegular';
     src: url('../fonts/Roboto-Regular.ttf') format('truetype');
@@ -29,10 +28,6 @@ $border-bottom-color: #f8f8f8;
     line-height: 16px;
     text-align: center;
     background: $auchan-color;
-}
-
-@mixin name_block {
-    font-size: 12px;
 }
 
 body {
@@ -69,8 +64,8 @@ body {
             }
         }
         .inner_block {
-            @include inner_block_mixin;
             padding-top: 16px;
+            @include inner_block_mixin;
             .title {
                 display: flex;
                 .title_number {
@@ -82,8 +77,6 @@ body {
             }
             .form_block {
                 padding-top: 12px;
-                padding-bottom: 17px;
-                
                 .select-field {
                     .select-title {
                         color: $block-label-color;
@@ -104,7 +97,7 @@ body {
                         font-size: 15px;
                     }
                     .question_row {
-                        margin-top:13px;
+                        margin-top: 13px;
                         display: flex;
                         flex-wrap: wrap;
                         .question {
@@ -118,7 +111,6 @@ body {
                     .select_title {
                         margin-top: 14px;
                         color: $block-label-color;
-                   
                     }
                     .select_row {
                         select {
@@ -131,6 +123,9 @@ body {
                         }
                     }
                 }
+            }
+            &.last_block {
+                padding-bottom: 17px;
             }
         }
         .button_block {
@@ -150,10 +145,9 @@ body {
     }
 }
 
-
 // CHANGE DEFAULT STYLE;
 //INPUT FIELD
-.input-field  {
+.input-field {
     input.auchan {
         border-bottom: 1px solid $border-bottom-color;
         &+label {
@@ -161,7 +155,7 @@ body {
             line-height: 21px;
             color: $block-label-color;
         }
-    } 
+    }
     &.active {
         input.auchan:focus {
             font-size: 16px;
@@ -169,12 +163,13 @@ body {
             color: $block-text-color;
             border-bottom: 1px solid $auchan-color;
             box-shadow: 0 1px 0 0 $auchan-color;
-            &+label.active{
-                color: $auchan-color; 
+            &+label.active {
+                color: $auchan-color;
             }
         }
-    }   
+    }
 }
+
 //RADIO BUTTON
 .question_block {
     [type="radio"].with-gap:checked+label:before,
@@ -183,6 +178,5 @@ body {
     }
     [type="radio"].with-gap:checked+label:after {
         background-color: $auchan-color;
-        }
+    }
 }
-
