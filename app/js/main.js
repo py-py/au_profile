@@ -31,6 +31,37 @@ let PhoneMaskInput = (function () {
     return pub;
 })();
 
+let LoadDataHandler = (function(){
+    let pr = {},
+        pub = {};
+
+    pr.listInputField = ['phone', 'city', 'county_dist', 'city_dist', 'street', 'building', 'flat'];
+
+    pr.listRadioField = ['marital_status', 'child_flag', 'cat_flag', 'dog_flag', 'sport_flag', 'reader_flag'];
+    pr.listSelectField = ['family_members', 'transport_type', 'frequency_visit_code'];
+    pr.listChoice = pr.listRadioField.concat(pr.listSelectField);
+
+
+    pr.setInputValue = function (key , value) {
+        $('[name="' + key  +'"]').first(function () {
+            this.value = value;
+        })
+    };
+
+    pr.inputData = function (data) {
+        for (let key in data) {
+            if (pr.listInputField.includes(key)) {
+                pr.setInputValue(key, data.key);
+            }
+        }
+    };
+
+    pub.handle = function (data) {
+        pr.inputData(data);
+    };
+
+    return pub;
+})();
 
 ;
 $(document).ready(function () {
@@ -45,6 +76,8 @@ $(document).ready(function () {
 
     PhoneMaskInput.handle();
     // PhoneMaskInput.insertInHTML('+3805012345678');
-    // console.log(PhoneMaskInput.getPhoneNumber())
+    // console.log(PhoneMaskInput.getPhoneNumber());
+
+    //LoadDataHandler.handle(data);
 
 });
