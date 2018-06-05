@@ -34,8 +34,9 @@ gulp.task('css-libs', ['sass'], function() {
 
 gulp.task('scripts', function() {
     return gulp.src([
-        // 'app/libs/jquery/dist/jquery.min.js',
-        // 'app/libs/materialize/dist/js/materialize.min.js'
+        'app/libs/jquery/dist/jquery.min.js',
+        'app/libs/materialize/dist/js/materialize.min.js',
+        'node_modules/vanilla-text-mask/dist/vanillaTextMask.js'
         ])
         .pipe(concat('libs.min.js'))
         .pipe(uglify())
