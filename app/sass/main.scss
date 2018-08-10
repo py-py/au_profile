@@ -45,6 +45,19 @@ body {
             align-content: center;
         }
     }
+    .notification {
+        position: absolute;
+        display: flex;
+        align-items: center; 
+        justify-content: center;
+        height: 48px;
+        width: 100%;
+        background-color: #b3282d;
+        background-color: #00985f;
+        font-size: 14px;
+        color: #ffffff;
+        text-align: center;
+    }
     .profile_container {
         .place_picture {
             img {
@@ -127,6 +140,12 @@ body {
             &.last_block {
                 padding-bottom: 17px;
             }
+            #error_phone {
+                margin-top: -16px;
+                font-size: 12px;
+                color: $auchan-color;
+                padding-bottom: 4px;
+            }
         }
         .button_block {
             margin: 16px 0;
@@ -140,6 +159,12 @@ body {
                 font-size: 16px;
                 width: 296px;
                 height: 48px;
+                img {
+                    display: none;
+                    margin-top: 5px;
+                    width: 30px;
+                    height: 30px;
+                }
             }
         }
     }

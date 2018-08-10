@@ -18,6 +18,11 @@
         </div>
     </div>
 
+    <div id='notification' class="notification">
+        <!-- К сожалению, не получилось сохранить изменения, попробуйте ещё -->
+        Ваша информация была успешно изменена
+    </div>
+
     <div class="profile_container">
         <div class="place_picture">
             <img src="img/place_picture.svg" alt="place_picture">
@@ -36,6 +41,7 @@
                         <label for="phone">Ваш телефон</label>
                     </div>
                 </div>
+                <div id="error_phone">Не верно введен номер телефона.</div>
             </div>
 
             <!-- ВТОРОЙ БЛОК -->
@@ -228,12 +234,17 @@
 
             <!-- SUBMIT BUTTON -->
             <div class="button_block">
-                <input type="submit" class="button" value="СОХРАНИТЬ">
+                <button type="submit" class="button" value="">
+                    <span id="button_text">СОХРАНИТЬ</span>
+                    <!-- <img id="button_image" src="img/Spin-1s-200px.gif" alt="spinner" /> -->
+                </button>
             </div>
 
         </form>
     </div>
-
+    <script>
+        // let data = {{ data | safe }};
+    </script>
     <script src="js/libs.min.js"></script>
     <script src="js/main.js"></script>
 </body>
